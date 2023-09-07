@@ -308,7 +308,7 @@ https://templatemo.com/tm-503-newline
               </div>
             </li>
 
-            <li id="tool-section>
+            <li id="Tools">
               <div class="heading">
                 <h1>Tools</h1>
               </div>
@@ -463,20 +463,20 @@ https://templatemo.com/tm-503-newline
         <script src="js/main.js"></script>
 
         <script>
-          // Function to scroll to the tools section
-          function scrollToTools() {
-              $('html, body').animate({
-                  scrollTop: $("#tool-section").offset().top
-              }, 1000);
+          // Function to activate the tools section
+          function activateToolsSection() {
+              // Trigger a click event on the navigation item for the "Tools" section
+              $("nav ul li:contains('Tools') a").trigger('click');
           }
       
           // Check the URL fragment on page load
           $(document).ready(function() {
               if (window.location.hash === "#tools") {
-                  scrollToTools();
+                  activateToolsSection();
               }
           });
       </script>
+      
       
 
     </body>
