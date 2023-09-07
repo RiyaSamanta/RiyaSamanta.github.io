@@ -463,19 +463,17 @@ https://templatemo.com/tm-503-newline
         <script src="js/main.js"></script>
 
         <script>
-          // Function to activate the tools section
-          function activateToolsSection() {
-              // Trigger a click event on the navigation item for the "Tools" section
-              $("nav ul li:contains('Tools') a").trigger('click');
-          }
-      
-          // Check the URL fragment on page load
           $(document).ready(function() {
               if (window.location.hash === "#tools") {
-                  activateToolsSection();
+                  setTimeout(function() {
+                      $('html, body').animate({
+                          scrollTop: $("#tools-section").offset().top
+                      }, 1000);
+                  }, 500); // Delay of 500ms to ensure all scripts have loaded and initialized
               }
           });
       </script>
+      
       
       
 
