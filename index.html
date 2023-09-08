@@ -465,11 +465,10 @@ https://templatemo.com/tm-503-newline
         <script>
           $(document).ready(function() {
               if (window.location.hash === "#tools") {
-                  setTimeout(function() {
-                      $('html, body').animate({
-                          scrollTop: $("#tools").offset().top
-                      }, 1000);
-                  }, 1000); // Delay of 500ms to ensure all scripts have loaded and initialized
+                setTimeout(function() {
+            var element = document.getElementById("tools");
+            element.scrollIntoView({ behavior: 'smooth' });
+        }, 1000); // Delay of 500ms to ensure all scripts have loaded and initialized
               }
           });
       </script>
